@@ -1,0 +1,466 @@
+.tittle {
+    color: #232F65;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.desc {
+    color: #4A4A4A;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.institutionName {
+    color: #4A4A4A;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.infoCourseItem span {
+    color: #232F65;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.infoCourseItem div {
+    padding: 12px 14px;
+    color: #1F1F39;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 23px;
+    border: 0.7px solid #1F1F39;
+    white-space: nowrap;
+}
+
+.specialCourseInfo {
+    column-gap: 170px;
+    row-gap: 15px;
+    width: 100%;
+}
+.specialCourseInfo .left {
+    width: 35%;
+}
+
+.specialCourseInfo .right {
+    width: 65%;
+}
+
+.institutionContainer {
+    column-gap: 13px;
+    row-gap: 12px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.institutionLogo {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.institutionLogo img {
+    width: 70%;
+    margin: auto;
+}
+
+.institutionName {
+    color: #4A4A4A;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.circleBorder {
+    z-index: -2;
+    transform: translateX(-80px);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.circle {
+    z-index: -2;
+    transform: translate(1100px, -250px);
+    position: absolute;
+    width: 270px;
+    height: 270px;
+}
+
+.circleBorder img {
+    width: 100%;
+}
+
+.previewMateriContainer {
+    margin-top: 50px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.infoPreviewMateri {
+    padding-bottom: 17px;
+    border-bottom: 2px solid #7C7C7C;
+    color: #7C7C7C;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tittlePreviewMateri {
+    color: #5C5A5A;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.previewMateriContainer .left {
+    border-radius: 33px;
+    overflow: hidden;
+    width: 60%;
+}
+
+.previewMateriContainer .right {
+    width: 40%;
+}
+
+.previewMateriContainer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.listPreview {
+    width: 100%;
+}
+
+.listPreviewImage {
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+}
+
+.detailInfoSpecialCourse {
+    margin-top: 40px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.target {
+    width: 44%;
+    padding-right: 100px;
+    border-right: 1px solid black;
+}
+
+.cocok {
+    padding-left: 100px;
+}
+
+.CourseLearned h1 {
+    margin-top: 78px;
+    margin-bottom: 55px;
+    color: #5C5A5A;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.announce img {
+    width: 100%;
+}
+
+.announce {
+    width: 62px;
+}
+
+.detailInfoSpecialCourse h1 {
+    color: #232F65;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.detailInfoSpecialCourse p, .detailInfoSpecialCourse span {
+    color: #515151;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29.545px;
+    letter-spacing: 0.5px;
+}
+
+.cardCourseContainer img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.contentCard {
+    z-index: 2;
+    padding: 19px 10px 19px 10px;
+    background-color: white;
+
+}
+
+.contentCard h3 {
+    color: #232F65;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.contentCard p {
+    color: #515151;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contentCard span {
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.student {
+    display: none;
+}
+
+.student.show {
+    display: block;
+}
+
+.cardCourseImage {
+    background-position: center;
+    background-size: cover;
+    height: 290px;
+    position: relative;
+}
+
+.cardCourseImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown {
+    padding: 35px 10px;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+    width: 60px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg) translate(20px, -10px);
+}
+
+.cardCourse {
+    max-height: 300px;
+    border: 1px solid #515151;
+    border-radius: 18px;
+    transition: max-height 0.3s;
+    column-gap: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.cardCourse:hover {
+    border: 3px solid #232F65;
+}
+
+.cardCourse.expand {
+    transition: 0.3s;
+    max-height: 105px;
+    overflow: hidden;
+}
+
+.detailCourseCardContainer {
+    row-gap: 60px;
+    column-gap: 30px;
+}
+
+.headContainer {
+    color: #06241B;
+    margin-top: 75px;
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    align-items: center;
+}
+
+.headContainer h1 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.popularContainer {
+    margin-top: 150px;
+}
+
+.filterItem {
+    color: #1F1F39;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 10px 13px 10px;
+    border: 1px solid #252570;
+    border-radius: 24px;
+    white-space: nowrap;
+
+}
+
+.filterItem.active {
+    background-color: #252570;
+    color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .headContainer {
+        flex-direction: column-reverse;
+        align-items: start;
+        margin-top: 20px;
+    }
+
+    .filterContainer {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .specialCourseInfo .left {
+        width: 100%;
+    }
+
+
+    .specialCourseInfo .right {
+        width: 100%;
+    }
+
+    .target {
+        width: 80%;
+        padding-right: 0px;
+        border-right: 0px solid black;
+    }
+
+    .detailInfoSpecialCourse {
+        padding-right: 0px;
+    }
+
+
+
+    .tittleContainer {
+        width: 80%;
+    }
+
+    .tittle {
+        font-size: 16px;
+    }
+
+    .desc {
+        font-size: 10px;
+    }
+
+    .institutionName {
+        font-size: 8px;
+    }
+
+    .institutionLogo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .institutionContainer {
+        row-gap: 6px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .infoCourseItem span {
+        font-size: 12px;
+    }
+
+    .infoCourseItem div {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+    .detailInfoSpecialCourse h1 {
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .detailInfoSpecialCourse p, .detailInfoSpecialCourse span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17.5px;
+        letter-spacing: 0.5px;
+    }
+
+    .announce {
+        width: 47px;
+    }
+
+    .CourseLearned h1 {
+        margin-top: 78px;
+        margin-bottom: 35px;
+        font-size: 16px;
+        width: 70%;
+    }
+
+    .contentCard h3 {
+        font-size: 14px;
+    }
+
+    .contentCard p {
+        font-size: 12px;
+    }
+
+    .contentCard span {
+        font-size: 8px;
+    }
+
+    .cardCourse.expand {
+        max-height: 80px;
+    }
+
+    .cardCourse {
+        height: 180px;
+    }
+
+    .cardCourseImage {
+        width: 400px;
+        height: 180px;
+    }
+
+    .rotate {
+        transform: rotate(180deg) translate(10px, 2px);
+    }
+
+}
+
+@media only screen and (max-width: 769px) {
+    .headContainer h1 {
+        font-size: 20px;
+    }
+
+    .filterItem {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .filterContainer {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .detailCourseCardContainer {
+        row-gap: 20px;
+    }
+
+    .previewMateriContainer .left {
+        width: 100%;
+    }
+
+    .previewMateriContainer .right {
+        width: 100%;
+    }
+}
