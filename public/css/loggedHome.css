@@ -4,28 +4,6 @@
     row-gap: 100px;
 }
 
-.topDashboard {
-    position: relative;
-    overflow: hidden;
-
-}
-
-.topDashboard::before {
-    content: "";
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    border-radius: 0 0 250px 0;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 8.85%, #EBF0F5 100%);
-    z-index: 1;
-}
-
-#searchInput, #mapInput {
-    width: 300px;
-}
-
 .announce {
     width: 213px;
     position: absolute;
@@ -34,47 +12,74 @@
 }
 
 .contentTop {
-    position: relative;
-    z-index: 2;
+    z-index: -1;
     width: 100%;
 }
 
 .contentTop .contentText {
-    transform: translateY(50px);
-    width: 50%;
+    margin-top: 4%;
 }
 
-.contentTop .contentText h1 {
-    width: 80%;
+.mobileDashboard {
+    display: none;
+}
+
+/* custom dropdown */
+.ui.search {
+    font-size: 16px !important;
+    font-family: Poppins !important;
+    font-weight: 400;
+    width: 100%;
+}
+
+.ui.selection.dropdown {
+    border: 1px solid rgba(20, 20, 20, 0.10) !important;
+    box-sizing: border-box !important;
+    box-shadow: 0px 2.2px 19.8px 0px rgba(121, 102, 234, 0.15) !important;
+}
+
+input.search {
+    transform: translateY(10px) !important;
+}
+
+.ui.dropdown:not(.labeled)>.dropdown.icon {
+    min-width: 0em !important;
+    font-size: 20px !important;
+    margin: auto !important;
+}
+
+.ui.selection.dropdown>.dropdown.icon {
+    top: 0px !important;
+    right: 0px !important;
+}
+
+:not(.field)>.ui.ui.ui.transparent[class*="left icon"].input>input {
+    padding-left: 1em !important;
+}
+
+.inputSearchContainer {
+    width: 100%;
 }
 
 .inputContainer {
-    position: relative;
-    transform: translateY(-200px);
-    z-index: 3;
-    width: 88%;
+    z-index: 20;
     border-radius: 5px;
-    overflow: hidden;
+    transform: translateY(-30px);
+}
+
+.inputSearchContainer, .inputMapContainer {
     background-color: white;
-    box-shadow: 2px 2px 22px 0px rgba(0, 0, 0, 0.12);
 }
 
 .topDashboard h1 {
-    color: #585858;
+    color: #4883FF;
     font-family: Poppins;
-    font-size: 84px;
-    font-weight: 400;
-}
-
-.topDashboard h1 span {
-    color: #2B8EE9;
-    font-family: Poppins;
-    font-size: 84px;
+    font-size: 40px;
     font-weight: 700;
 }
 
 .topDashboard p {
-    color: #484848;
+    color: #7683B2;
     font-size: 24px;
     font-weight: 400;
 }
@@ -109,10 +114,14 @@
     background-color: transparent;
 }
 
+#searchInput {
+    width: 300px;
+}
+
 .inputSearchContainer, .inputMapContainer {
     border: 1px solid rgba(20, 20, 20, 0.10);
     box-sizing: border-box;
-    width: 100%;
+    box-shadow: 0px 2.2px 19.8px 0px rgba(121, 102, 234, 0.15);
     display: flex;
     padding: 18px;
     color: rgba(20, 20, 20, 0.50);
@@ -127,10 +136,8 @@
 }
 
 button.apply {
-    width: fit-content;
-    text-wrap: nowrap;
     padding: 18px 40px;
-    background: #FB9E48;
+    background: #4883FF;
     outline: none;
     border: none;
     color: white;
@@ -273,7 +280,7 @@ button.apply {
     border: 1px solid #C5CAD5;
     background: #FFF;
     height: 296px;
-    width: 287px;
+    width: 100%;
 }
 
 .cardFeatured .jobTime {
@@ -526,7 +533,39 @@ button.apply {
     transform: translateX(80px);
 }
 
+@media only screen and (max-width: 1400px) {
+    #searchInput {
+        width: 200px;
+    }
+}
+
 @media only screen and (max-width: 990px) {
+    .ui.selection.dropdown>.dropdown.icon {
+        transform: translateY(-8px) !important;
+    }
+
+    .searchIcon, .mapIcon {
+        width: 20px;
+        height: 20px;
+        margin: auto;
+    }
+
+    .inputSearchContainer, .inputMapContainer {
+        width: fit-content;
+    }
+
+    #searchInput {
+        width: 120px;
+    }
+
+    input.search {
+        transform: translateY(0px) !important;
+    }
+
+    .allContentContainer {
+        row-gap: 40px;
+    }
+
     .contentTop .contentText {
         width: 100%;
     }
@@ -540,30 +579,20 @@ button.apply {
     }
 
     .topDashboard h1 {
-        font-size: 36px;
+        font-size: 26px;
     }
 
-    .topDashboard h1 span {
-        font-size: 36px;
-    }
-
-    .topDashboard::before {
-        height: 200%;
-    }
-
-    .topDashboard {
-        height: 500px;
-    }
-
-    .inputContainer {
-        transform: translateY(100px);
-        flex-direction: column;
-        align-items: center;
+    .topDashboard p {
+        font-size: 16px;
     }
 
     .inputSearchContainer, .inputMapContainer {
         padding: 10px;
-        font-size: 10px;
+        font-size: 12px;
+    }
+
+    .ui.search {
+        font-size: 12px !important;
     }
 
     .applyAndMapInput {
@@ -574,22 +603,9 @@ button.apply {
         width: 100%;
     }
 
-    .searchIcon, .mapIcon {
-        height: 11px;
-        width: 11px;
-    }
-
     button.apply {
         padding: 8px 17px;
         font-size: 10px;
-    }
-
-    .inputContainer {
-        width: 100%;
-    }
-
-    #searchInput, #mapInput {
-        width: 100%;
     }
 
     /* popular section */
@@ -755,7 +771,8 @@ button.apply {
         font-size: 8px;
     }
 
-    review .peopleImageReview, #contentCarousel {
+    /* review */
+    .peopleImageReview, #contentCarousel {
         display: none;
     }
 
@@ -817,6 +834,7 @@ button.apply {
         width: 11px;
         height: 10px;
     }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -830,12 +848,52 @@ button.apply {
 }
 
 @media only screen and (max-width: 500px) {
+    .popularCategory {
+        transform: translateY(-50px);
+    }
+
+    .inputContainer {
+        flex-direction: column;
+        width: 89% !important;
+    }
+
+    .leftDashboard, .rightDashboard {
+        display: none;
+    }
+
+    .mobileDashboard {
+        display: block !important;
+        width: 50%;
+    }
+
+    .topDashboard h1 {
+        font-size: 36px;
+        padding-left: 10%;
+    }
+
+    .topDashboard p {
+        display: none;
+    }
+
+    .inputSearchContainer {
+        width: 100%;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
     .topJobCard {
         width: 175px;
     }
 
     .cardFeatured {
         width: 175px;
+    }
+
+    .inputContainer {
+        width: 70%;
+        transform: translateY(-110px);
     }
 
     /* popular section */
